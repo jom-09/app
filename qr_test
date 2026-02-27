@@ -1,0 +1,9 @@
+<?php
+require_once __DIR__ . "/lib/phpqrcode/qrlib.php";
+
+$data = "Hello QR";
+@mkdir(__DIR__ . "/qrcodes", 0755, true);
+$file = __DIR__ . "/qrcodes/test.png";
+
+QRcode::png($data, $file, QR_ECLEVEL_L, 6);
+echo "<img src='qrcodes/test.png' style='width:220px'>";
