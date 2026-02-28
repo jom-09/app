@@ -1104,3 +1104,38 @@ body.app-body{
     box-shadow:none !important;
   }
 }
+
+/* ===============================
+   BADGE BRAND (LOGO BEFORE TEXT)
+================================= */
+.app-badge--brand{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+}
+
+.app-badge__logo{
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: #fff;
+  padding: 4px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.12);
+  flex: 0 0 auto;
+}
+
+.app-badge__text{
+  display: inline-block;
+  line-height: 1.2;
+}
+
+/* mobile: stack para di masikip */
+@media (max-width: 576px){
+  .app-badge--brand{
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+}
